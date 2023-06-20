@@ -1,0 +1,16 @@
+kind: role
+version: v5
+metadata:
+  name: read-write
+spec:
+  allow:
+    logins: ['root', 'ubuntu', '{{external.logins}}']
+    db_labels:
+      '*': '*'
+    db_names:
+      - '*'
+    db_users:
+      - '*'
+    rules:
+      - resources: ["*"]
+        verbs: ["*"]

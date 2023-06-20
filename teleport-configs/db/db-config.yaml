@@ -1,0 +1,15 @@
+# This config need to be added in /etc/teleport.yaml
+db_service:
+  enabled: "yes"
+  databases:
+  - name: ""
+    description: "AWS RDS Postgres instance"
+    protocol: "postgres"
+    uri: "DB_HOST:5432"
+    static_labels:
+      env: ""
+      project: ""
+    aws:
+      region: ""
+      rds:
+        instance_id: ""
